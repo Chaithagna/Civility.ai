@@ -12,7 +12,7 @@ import VoiceRecorder from '../components/VoiceRecorder';
 import VoiceUpload from '../components/VoiceUpload';
 import LoadingSpinner from '../components/LoadingSpinner';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+const API_URL = process.env.REACT_APP_API_URL || 'https://civility-ai-1.onrender.com/';
 
 function DashboardPage({ user, token }) {
   const navigate = useNavigate();

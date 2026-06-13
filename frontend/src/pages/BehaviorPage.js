@@ -20,7 +20,7 @@ import {
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, Title, Tooltip, Legend);
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+const API_URL = process.env.REACT_APP_API_URL || 'https://civility-ai-1.onrender.com/';
 
 function BehaviorPage({ user, token }) {
   const navigate = useNavigate();
