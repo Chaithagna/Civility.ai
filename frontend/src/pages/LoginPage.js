@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import { FiShield, FiLock, FiGlobe } from 'react-icons/fi';
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || 'https://civility-ai-1.onrender.com/';
+const API_URL = (process.env.REACT_APP_API_URL || 'https://civility-ai-1.onrender.com').replace(/\/$/, '');
 
 function LoginPage({ onLogin }) {
   const [isLoading, setIsLoading] = useState(false);

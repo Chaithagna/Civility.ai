@@ -18,8 +18,10 @@ def get_db():
     if _db is None:
         uri = getattr(settings, 'MONGODB_URI', 'mongodb://localhost:27017/')
         db_name = getattr(settings, 'MONGODB_NAME', 'civility_ai')
-        _client = MongoClient(uri, serverSelectionTimeoutMS=5000)
-        _db = _client[db_name]
+    import certifi
+
+    _client = MongoClient(uri, serverSelectionTimeoutMS=5000, tlsCAFile=certifi.where())
+    _db = _client[db_name]
     return _db
 
 
